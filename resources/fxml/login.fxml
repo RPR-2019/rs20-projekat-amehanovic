@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rs.projekat.LoginController">
+   <stylesheets>
+      <URL value="@/css/login.css" />
+   </stylesheets>
+   <columnConstraints>
+      <ColumnConstraints prefWidth="350.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+   </rowConstraints>
+   <children>
+      <Label text="Log In" GridPane.halignment="CENTER">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <TextField fx:id="loginUsername" alignment="CENTER" maxWidth="180.0" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </TextField>
+      <PasswordField fx:id="loginPassword" alignment="CENTER" maxWidth="180.0" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </PasswordField>
+      <Button fx:id="btnLogin" maxWidth="0.0" minHeight="32.0" minWidth="180.0" mnemonicParsing="false" text="Login" GridPane.halignment="CENTER" GridPane.rowIndex="6">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Button fx:id="btnRegister" layoutX="38.0" layoutY="186.0" minHeight="32.0" minWidth="180.0" mnemonicParsing="false" text="Register" GridPane.halignment="CENTER" GridPane.rowIndex="8">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</GridPane>

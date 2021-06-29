@@ -1,0 +1,16 @@
+#loginUsername, #loginPassword{
+    -fx-background-radius: 10 10 10 10;
+}
+
+#btnLogin:hover, #btnRegister:hover{
+    -fx-background-radius: 10 10 10 10;
+    -fx-background-color: linear-gradient(to right, #25084d, #420000);
+    -fx-text-fill: white;
+}
+#btnLogin, #btnRegister{
+    -fx-border-radius: 10 10 10 10;
+    -fx-border-style: solid;
+    -fx-background-color: white;
+    -fx-border-color: black;
+}
+

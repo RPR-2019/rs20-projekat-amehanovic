@@ -1,16 +1,27 @@
-#loginUsername, #loginPassword{
+#loginUsername, #loginPassword, #registerUsername, #registerPassword{
     -fx-background-radius: 10 10 10 10;
 }
 
-#btnLogin:hover, #btnRegister:hover{
+.button{
+    -fx-border-radius: 10 10 10 10;
+    -fx-border-style: solid;
+    -fx-background-color: white;
+    -fx-border-color: linear-gradient(to right, #25084d, #420000);
+}
+
+.button:hover{
     -fx-background-radius: 10 10 10 10;
     -fx-background-color: linear-gradient(to right, #25084d, #420000);
     -fx-text-fill: white;
 }
-#btnLogin, #btnRegister{
-    -fx-border-radius: 10 10 10 10;
-    -fx-border-style: solid;
-    -fx-background-color: white;
-    -fx-border-color: black;
+.poljeNeispravno{
+    -fx-background-color: lightpink;
 }
 
+.poljeIspravno{
+    -fx-background-color: limegreen;
+}
+
+.poljeDefault{
+    -fx-background-color: white;
+}

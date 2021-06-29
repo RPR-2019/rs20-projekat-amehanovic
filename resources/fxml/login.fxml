@@ -42,14 +42,19 @@
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </padding>
       </PasswordField>
-      <Button fx:id="btnLogin" maxWidth="0.0" minHeight="32.0" minWidth="180.0" mnemonicParsing="false" text="Login" GridPane.halignment="CENTER" GridPane.rowIndex="6">
+      <Button fx:id="btnLogin" defaultButton="true" maxWidth="0.0" minHeight="32.0" minWidth="180.0" mnemonicParsing="false" onAction="#loginKlik" text="Login" GridPane.halignment="CENTER" GridPane.rowIndex="6">
          <font>
             <Font name="System Bold" size="14.0" />
          </font></Button>
-      <Button fx:id="btnRegister" layoutX="38.0" layoutY="186.0" minHeight="32.0" minWidth="180.0" mnemonicParsing="false" text="Register" GridPane.halignment="CENTER" GridPane.rowIndex="8">
+      <Button fx:id="btnRegister" layoutX="38.0" layoutY="186.0" minHeight="32.0" minWidth="180.0" mnemonicParsing="false" onAction="#registerKlik" text="Register" GridPane.halignment="CENTER" GridPane.rowIndex="8">
          <font>
             <Font name="System Bold" size="14.0" />
          </font></Button>
+      <Label fx:id="loginErrorLabel" textFill="RED" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
    </children>
    <padding>
       <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />

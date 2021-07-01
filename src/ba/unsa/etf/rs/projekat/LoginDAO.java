@@ -12,6 +12,8 @@ public class LoginDAO {
     private PreparedStatement getAdminsUpit;
     private PreparedStatement getUsernamesAdminsUpit;
     private PreparedStatement getUsernamesUsersUpit;
+    private PreparedStatement addNewUserUpit;
+    private PreparedStatement getMaxIdUsers;
 
     public static LoginDAO getInstance() {
         if (instance == null) instance = new LoginDAO();
@@ -30,6 +32,8 @@ public class LoginDAO {
             getAdminsUpit = conn.prepareStatement("SELECT * FROM admins");
             getUsernamesAdminsUpit = conn.prepareStatement("SELECT username FROM users");
             getUsernamesUsersUpit = conn.prepareStatement("SELECT username FROM admins");
+            addNewUserUpit = conn.prepareStatement("INSERT INTO users VALUES(?, ?, ?, ?)");
+            getMaxIdUsers = conn.prepareStatement("SELECT MAX(id)+1 FROM users");
         }catch(SQLException e){
             e.printStackTrace();
         }
@@ -100,5 +104,24 @@ public class LoginDAO {
             throwables.printStackTrace();
         }
         return ret;
+    }
+
+    public void registerUser(String username, String password){
+        try {
+            ResultSet rs = getMaxIdUsers.executeQuery();
+            int id = 1;
+            if(rs.next())
+                id=rs.getInt(1);
+
+
+            addNewUserUpit.setInt(1, id);
+            addNewUserUpit.setString(2, username);
+            addNewUserUpit.setString(3, password);
+            addNewUserUpit.setString(4, "");
+
+            addNewUserUpit.executeUpdate();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
     }
 }

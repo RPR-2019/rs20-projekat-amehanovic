@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -21,6 +22,7 @@ public class LoginController {
     public TextField loginUsername;
     public PasswordField loginPassword;
     public Label loginErrorLabel;
+    public Button btnQuit;
     private LoginDAO dao;
 
     private ArrayList<Login> users, admins;
@@ -42,10 +44,13 @@ public class LoginController {
     public void registerKlik(ActionEvent actionEvent) throws IOException {
         Stage mystage = new Stage();
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/register.fxml"));
-        mystage.setTitle("Home");
+        mystage.setTitle("Register");
         mystage.setScene(new Scene(root, 350, 350));
         mystage.setResizable(false);
         mystage.show();
+
+        Stage stage = (Stage) loginErrorLabel.getScene().getWindow();
+        stage.close();
     }
 
     public void loginKlik(ActionEvent actionEvent) throws IOException {
@@ -83,5 +88,9 @@ public class LoginController {
             if(!(loginPassword.getText().isEmpty()) && !(loginUsername.getText().isEmpty()))
                 loginErrorLabel.setText("Wrong credentials. Try again, or register!");
         }
+    }
+
+    public void quitKlik(ActionEvent actionEvent) {
+        System.exit(0);
     }
 }

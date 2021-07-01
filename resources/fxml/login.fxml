@@ -23,6 +23,8 @@
       <RowConstraints />
       <RowConstraints minHeight="10.0" prefHeight="30.0" />
       <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
    </rowConstraints>
    <children>
       <Label text="Log In" GridPane.halignment="CENTER">
@@ -55,6 +57,11 @@
             <Font size="15.0" />
          </font>
       </Label>
+      <Button fx:id="btnQuit" cancelButton="true" layoutX="100.0" layoutY="260.0" minHeight="32.0" minWidth="180.0" mnemonicParsing="false" onAction="#quitKlik" text="Quit" GridPane.halignment="CENTER" GridPane.rowIndex="10">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
    </children>
    <padding>
       <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
